@@ -1,0 +1,28 @@
+otpautoinstall.pl Readme
+
+== Description ==
+
+The otpautoinstall.pl tool will 
+1. connect to the erlang.org website and download the source package. 
+2. unpack the tar.gz file
+3. runs configure according to options set by the tool
+4. runs make
+5. runs make install 
+
+There is currently no good error checking in the tool. 
+Please use the install_log.txt file to see what's going on. 
+
+== Usage ==
+
+For help:
+	./otpautoinstall.pl -h
+
+Basic stuff:	
+	./otpautoinstall.pl -r R14B04
+
+Custom paths:
+	./otpautoinstall.pl -r R14B04 -s /opt/otp/src -t /opt/otp/R14B04
+
+Debugging:
+	./otpautoinstall.pl -r R14B04 -debug
+
